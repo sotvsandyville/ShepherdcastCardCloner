@@ -28,24 +28,8 @@ void ::ShepherdcastClonerPC::MainPage::InitializeComponent()
 
 void ::ShepherdcastClonerPC::MainPage::Connect(int __connectionId, ::Platform::Object^ __target)
 {
-    switch (__connectionId)
-    {
-    case 2:
-        {
-            this->DriveC = safe_cast<::Windows::UI::Xaml::Controls::ComboBox^>(__target);
-        }
-        break;
-    case 3:
-        {
-            this->DriveB = safe_cast<::Windows::UI::Xaml::Controls::ComboBox^>(__target);
-        }
-        break;
-    case 4:
-        {
-            this->DriveA = safe_cast<::Windows::UI::Xaml::Controls::ComboBox^>(__target);
-        }
-        break;
-    }
+    __connectionId;         // unreferenced 
+    __target;               // unreferenced
     _contentLoaded = true;
 }
 
