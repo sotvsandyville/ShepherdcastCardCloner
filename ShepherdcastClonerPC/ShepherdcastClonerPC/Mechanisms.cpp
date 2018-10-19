@@ -19,22 +19,25 @@
 
 #include <cstdio>
 #include <fstream>
+#include <string>
+#include <cstring>
 
 using std::rename;
 using std::ifstream;
+using std::string;
 
-void incrementFilename(char * existingFilename)
+void incrementFilename(char * existingFilename, string directory)
 {
-	if (existingFilename[2] == '9')
+	if (existingFilename[directory.length() + 2] == '9')
 	{
-		if (existingFilename[1] == '9')
+		if (existingFilename[directory.length() + 1] == '9')
 		{
-			++existingFilename[0];
-			existingFilename[1] == '0';
+			++existingFilename[directory.length() + 0];
+			existingFilename[directory.length() + 1] == '0';
 		}
 		else
-			++existingFilename[1];
-		existingFilename[2] = '0';
+			++existingFilename[directory.length() + 1];
+		existingFilename[directory.length() + 2] = '0';
 	}
 	else
 	{
@@ -42,29 +45,30 @@ void incrementFilename(char * existingFilename)
 	}
 }
 
-void decrementFilename(char * existingFilename)
+void decrementFilename(char * existingFilename, string directory)
 {
-	if (existingFilename[2] == '0')
+	if (existingFilename[directory.length() + 2] == '0')
 	{
-		if (existingFilename[1] == '0')
+		if (existingFilename[directory.length() + 1] == '0')
 		{
-			--existingFilename[0];
-			existingFilename[1] == '9';
+			--existingFilename[directory.length() + 0];
+			existingFilename[directory.length() + 1] == '9';
 		}
 		else
-			--existingFilename[1];
-		existingFilename[2] = '9';
+			--existingFilename[directory.length() + 1];
+		existingFilename[directory.length() + 2] = '9';
 	}
 	else
 	{
-		--existingFilename[2];
+		--existingFilename[directory.length() + 2];
 	}
 }
 
 // this function takes a string listing the directory of files to rename and renames every file in the directory 
-bool batchRename(char * directory)
+bool batchRename(string directory)
 {
-	// TODO: get directory file count (Boost?)
+	char * existingPath = new char [directory.length()+8];  // +8 to accommodate null terminator and filename
+	strcpy(existingPath, directory.c_str());
 	int fileCount = 0;
 	char existingFilename[8] = "000.wav";
 	bool scanning = true;
@@ -75,11 +79,11 @@ bool batchRename(char * directory)
 		try
 		{
 			// make sure it opens
-			file.open(strcat(directory, existingFilename));  //TODO: change concat. method
+			file.open(existingPath);  //TODO: change concat. method
 			file.close();
 			++fileCount;
 			// alter filename, note that filenames use 3 digits then .wav
-			incrementFilename(existingFilename);
+			incrementFilename(existingPath, directory);
 		}
 		catch (std::ifstream::failure e)
 		{
@@ -87,13 +91,13 @@ bool batchRename(char * directory)
 		}
 	}
 	// batch rename
-	char newFilename[8];
-	strcpy(newFilename, existingFilename);
-	incrementFilename(newFilename);  // new filename is one higher
+	char newFilePath[8];
+	strcpy(newFilePath, existingPath);
+	incrementFilename(newFilePath, directory);  // new filename is one higher
 	for (int i = 0; i < fileCount; ++i)
 	{
-		rename(strcat(directory, existingFilename), strcat(directory, newFilename));  // renaming procedure
-		decrementFilename(newFilename);  // bring each down down by one
-		decrementFilename(existingFilename);
+		rename(existingPath, newFilePath);  // renaming procedure
+		decrementFilename(newFilePath, directory);  // bring each down down by one
+		decrementFilename(existingPath, directory);
 	}
 }
