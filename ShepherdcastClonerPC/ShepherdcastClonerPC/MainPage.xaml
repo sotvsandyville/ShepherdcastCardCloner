@@ -6,9 +6,29 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="#e9ead3">
 
-    <Grid>
-
-    </Grid>
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10">
+        <TextBlock Text="Shepherdcast Cloner" Foreground="#37628f" FontSize="30" HorizontalAlignment="Center"/>
+        <TextBlock Text="This program is for use cloning the Shepherdcast to the storage devices for the MP3 players." Foreground="#37628f" TextAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap"/>
+        <TextBlock Text="Please specify the number of storage devices you are writing to total, then press Specify Optimal Card Slot Count." Foreground="Black" Margin="0, 5, 0, 0" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="Wrap"/>
+        <TextBox Name="Cards" InputScope="Number"/>
+        <Button Name="Optimized" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" Content="Begin Batch File Transfer" Click="Optimized_Click"/>
+        <TextBlock Text="To begin, select the drive letters for each storage device." Foreground="Black" Margin="0, 5, 0, 0" HorizontalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+            <TextBlock Text="Drive A: " Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <ComboBox Name="DriveA" Width="20" IsEnabled="False"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+            <TextBlock Text="Drive B: " Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <ComboBox Name="DriveB" Width="20" IsEnabled="False"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+            <TextBlock Text="Drive C: " Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <ComboBox Name="DriveC" Width="20" IsEnabled="False"/>
+        </StackPanel>
+        <TextBlock Text="Please enter the file path to the new file to copy." Foreground="Black" Margin="0, 5, 0, 0" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="Wrap"/>
+        <TextBox Name="FilePath" IsEnabled="False"/>
+        <Button Name="Run" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" Content="Begin Batch File Transfer" IsEnabled="False"/>
+    </StackPanel>
 </Page>

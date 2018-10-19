@@ -17,5 +17,7 @@ namespace ShepherdcastClonerPC
 	public:
 		MainPage();
 
+	private:
+		void Optimized_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
 	};
 }

@@ -7,6 +7,17 @@
 //------------------------------------------------------------------------------
 
 
+namespace Windows {
+    namespace UI {
+        namespace Xaml {
+            namespace Controls {
+                ref class TextBox;
+                ref class Button;
+                ref class ComboBox;
+            }
+        }
+    }
+}
 
 namespace ShepherdcastClonerPC
 {
@@ -28,6 +39,13 @@ namespace ShepherdcastClonerPC
         bool _contentLoaded;
     
     
+        private: ::Windows::UI::Xaml::Controls::TextBox^ Cards;
+        private: ::Windows::UI::Xaml::Controls::Button^ Optimized;
+        private: ::Windows::UI::Xaml::Controls::TextBox^ FilePath;
+        private: ::Windows::UI::Xaml::Controls::Button^ Run;
+        private: ::Windows::UI::Xaml::Controls::ComboBox^ DriveC;
+        private: ::Windows::UI::Xaml::Controls::ComboBox^ DriveB;
+        private: ::Windows::UI::Xaml::Controls::ComboBox^ DriveA;
     };
 }
 

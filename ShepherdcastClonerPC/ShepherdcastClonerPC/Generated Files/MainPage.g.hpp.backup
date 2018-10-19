@@ -28,8 +28,46 @@ void ::ShepherdcastClonerPC::MainPage::InitializeComponent()
 
 void ::ShepherdcastClonerPC::MainPage::Connect(int __connectionId, ::Platform::Object^ __target)
 {
-    __connectionId;         // unreferenced 
-    __target;               // unreferenced
+    switch (__connectionId)
+    {
+    case 2:
+        {
+            this->Cards = safe_cast<::Windows::UI::Xaml::Controls::TextBox^>(__target);
+        }
+        break;
+    case 3:
+        {
+            this->Optimized = safe_cast<::Windows::UI::Xaml::Controls::Button^>(__target);
+            (safe_cast<::Windows::UI::Xaml::Controls::Button^>(this->Optimized))->Click += ref new ::Windows::UI::Xaml::RoutedEventHandler(this, (void (::ShepherdcastClonerPC::MainPage::*)
+                (::Platform::Object^, ::Windows::UI::Xaml::RoutedEventArgs^))&MainPage::Optimized_Click);
+        }
+        break;
+    case 4:
+        {
+            this->FilePath = safe_cast<::Windows::UI::Xaml::Controls::TextBox^>(__target);
+        }
+        break;
+    case 5:
+        {
+            this->Run = safe_cast<::Windows::UI::Xaml::Controls::Button^>(__target);
+        }
+        break;
+    case 6:
+        {
+            this->DriveC = safe_cast<::Windows::UI::Xaml::Controls::ComboBox^>(__target);
+        }
+        break;
+    case 7:
+        {
+            this->DriveB = safe_cast<::Windows::UI::Xaml::Controls::ComboBox^>(__target);
+        }
+        break;
+    case 8:
+        {
+            this->DriveA = safe_cast<::Windows::UI::Xaml::Controls::ComboBox^>(__target);
+        }
+        break;
+    }
     _contentLoaded = true;
 }
 

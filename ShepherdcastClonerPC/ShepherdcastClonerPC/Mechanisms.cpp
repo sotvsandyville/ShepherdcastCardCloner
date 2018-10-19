@@ -17,6 +17,8 @@
 	Note to self: All code in this file MUST be portable!
 */
 
+#include "pch.h"
+
 #include <cstdio>
 #include <fstream>
 #include <string>
@@ -33,7 +35,7 @@ void incrementFilename(char * existingFilename, string directory)
 		if (existingFilename[directory.length() + 1] == '9')
 		{
 			++existingFilename[directory.length() + 0];
-			existingFilename[directory.length() + 1] == '0';
+			existingFilename[directory.length() + 1] = '0';
 		}
 		else
 			++existingFilename[directory.length() + 1];
@@ -52,7 +54,7 @@ void decrementFilename(char * existingFilename, string directory)
 		if (existingFilename[directory.length() + 1] == '0')
 		{
 			--existingFilename[directory.length() + 0];
-			existingFilename[directory.length() + 1] == '9';
+			existingFilename[directory.length() + 1] = '9';
 		}
 		else
 			--existingFilename[directory.length() + 1];
@@ -79,7 +81,7 @@ bool batchRename(string directory)
 		try
 		{
 			// make sure it opens
-			file.open(existingPath);  //TODO: change concat. method
+			file.open(existingPath);
 			file.close();
 			++fileCount;
 			// alter filename, note that filenames use 3 digits then .wav
@@ -100,4 +102,5 @@ bool batchRename(string directory)
 		decrementFilename(newFilePath, directory);  // bring each down down by one
 		decrementFilename(existingPath, directory);
 	}
+	return true;
 }
