@@ -13,22 +13,103 @@
         <TextBlock Text="This program is for use cloning the Shepherdcast to the storage devices for the MP3 players." Foreground="#37628f" TextAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap"/>
         <TextBlock Text="Please specify the number of storage devices you are writing to total, then press Specify Optimal Card Slot Count." Foreground="Black" Margin="0, 5, 0, 0" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="Wrap"/>
         <TextBox Name="Cards" InputScope="Number"/>
-        <Button Name="Optimized" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" Content="Begin Batch File Transfer" Click="Optimized_Click"/>
+        <Button Name="Optimized" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" Content="Specify Optimal Card Slot Count" Click="Optimized_Click" Background="#37628f"/>
         <TextBlock Text="To begin, select the drive letters for each storage device." Foreground="Black" Margin="0, 5, 0, 0" HorizontalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"/>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
             <TextBlock Text="Drive A: " Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <ComboBox Name="DriveA" Width="20" IsEnabled="False"/>
+            <ComboBox Name="DriveA" Width="20" IsEnabled="False" SelectionChanged="DriveA_SelectionChanged">
+                <ComboBoxItem Name="Aa">A:/</ComboBoxItem>
+                <ComboBoxItem Name="Ab">B:/</ComboBoxItem>
+                <ComboBoxItem Name="Ac">C:/</ComboBoxItem>
+                <ComboBoxItem Name="Ad">D:/</ComboBoxItem>
+                <ComboBoxItem Name="Ae">E:/</ComboBoxItem>
+                <ComboBoxItem Name="Af">F:/</ComboBoxItem>
+                <ComboBoxItem Name="Ag">G:/</ComboBoxItem>
+                <ComboBoxItem Name="Ah">H:/</ComboBoxItem>
+                <ComboBoxItem Name="Ai">I:/</ComboBoxItem>
+                <ComboBoxItem Name="Aj">J:/</ComboBoxItem>
+                <ComboBoxItem Name="Ak">K:/</ComboBoxItem>
+                <ComboBoxItem Name="Al">L:/</ComboBoxItem>
+                <ComboBoxItem Name="Am">M:/</ComboBoxItem>
+                <ComboBoxItem Name="An">N:/</ComboBoxItem>
+                <ComboBoxItem Name="Ao">O:/</ComboBoxItem>
+                <ComboBoxItem Name="Ap">P:/</ComboBoxItem>
+                <ComboBoxItem Name="Aq">Q:/</ComboBoxItem>
+                <ComboBoxItem Name="Ar">R:/</ComboBoxItem>
+                <ComboBoxItem Name="As">S:/</ComboBoxItem>
+                <ComboBoxItem Name="At">T:/</ComboBoxItem>
+                <ComboBoxItem Name="Au">U:/</ComboBoxItem>
+                <ComboBoxItem Name="Av">V:/</ComboBoxItem>
+                <ComboBoxItem Name="Aw">W:/</ComboBoxItem>
+                <ComboBoxItem Name="Ax">X:/</ComboBoxItem>
+                <ComboBoxItem Name="Ay">Y:/</ComboBoxItem>
+                <ComboBoxItem Name="Az">Z:/</ComboBoxItem>
+            </ComboBox>
         </StackPanel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
             <TextBlock Text="Drive B: " Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <ComboBox Name="DriveB" Width="20" IsEnabled="False"/>
+            <ComboBox Name="DriveB" Width="20" IsEnabled="False">
+                <ComboBoxItem Name="Ba">A:/</ComboBoxItem>
+                <ComboBoxItem Name="Bb">B:/</ComboBoxItem>
+                <ComboBoxItem Name="Bc">C:/</ComboBoxItem>
+                <ComboBoxItem Name="Bd">D:/</ComboBoxItem>
+                <ComboBoxItem Name="Be">E:/</ComboBoxItem>
+                <ComboBoxItem Name="Bf">F:/</ComboBoxItem>
+                <ComboBoxItem Name="Bg">G:/</ComboBoxItem>
+                <ComboBoxItem Name="Bh">H:/</ComboBoxItem>
+                <ComboBoxItem Name="Bi">I:/</ComboBoxItem>
+                <ComboBoxItem Name="Bj">J:/</ComboBoxItem>
+                <ComboBoxItem Name="Bk">K:/</ComboBoxItem>
+                <ComboBoxItem Name="Bl">L:/</ComboBoxItem>
+                <ComboBoxItem Name="Bm">M:/</ComboBoxItem>
+                <ComboBoxItem Name="Bn">N:/</ComboBoxItem>
+                <ComboBoxItem Name="Bo">O:/</ComboBoxItem>
+                <ComboBoxItem Name="Bp">P:/</ComboBoxItem>
+                <ComboBoxItem Name="Bq">Q:/</ComboBoxItem>
+                <ComboBoxItem Name="Br">R:/</ComboBoxItem>
+                <ComboBoxItem Name="Bs">S:/</ComboBoxItem>
+                <ComboBoxItem Name="Bt">T:/</ComboBoxItem>
+                <ComboBoxItem Name="Bu">U:/</ComboBoxItem>
+                <ComboBoxItem Name="Bv">V:/</ComboBoxItem>
+                <ComboBoxItem Name="Bw">W:/</ComboBoxItem>
+                <ComboBoxItem Name="Bx">X:/</ComboBoxItem>
+                <ComboBoxItem Name="By">Y:/</ComboBoxItem>
+                <ComboBoxItem Name="Bz">Z:/</ComboBoxItem>
+            </ComboBox>
         </StackPanel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
             <TextBlock Text="Drive C: " Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <ComboBox Name="DriveC" Width="20" IsEnabled="False"/>
+            <ComboBox Name="DriveC" Width="20" IsEnabled="False">
+                <ComboBoxItem Name="Ca">A:/</ComboBoxItem>
+                <ComboBoxItem Name="Cb">B:/</ComboBoxItem>
+                <ComboBoxItem Name="Cc">C:/</ComboBoxItem>
+                <ComboBoxItem Name="Cd">D:/</ComboBoxItem>
+                <ComboBoxItem Name="Ce">E:/</ComboBoxItem>
+                <ComboBoxItem Name="Cf">F:/</ComboBoxItem>
+                <ComboBoxItem Name="Cg">G:/</ComboBoxItem>
+                <ComboBoxItem Name="Ch">H:/</ComboBoxItem>
+                <ComboBoxItem Name="Ci">I:/</ComboBoxItem>
+                <ComboBoxItem Name="Cj">J:/</ComboBoxItem>
+                <ComboBoxItem Name="Ck">K:/</ComboBoxItem>
+                <ComboBoxItem Name="Cl">L:/</ComboBoxItem>
+                <ComboBoxItem Name="Cm">M:/</ComboBoxItem>
+                <ComboBoxItem Name="Cn">N:/</ComboBoxItem>
+                <ComboBoxItem Name="Co">O:/</ComboBoxItem>
+                <ComboBoxItem Name="Cp">P:/</ComboBoxItem>
+                <ComboBoxItem Name="Cq">Q:/</ComboBoxItem>
+                <ComboBoxItem Name="Cr">R:/</ComboBoxItem>
+                <ComboBoxItem Name="Cs">S:/</ComboBoxItem>
+                <ComboBoxItem Name="Ct">T:/</ComboBoxItem>
+                <ComboBoxItem Name="Cu">U:/</ComboBoxItem>
+                <ComboBoxItem Name="Cv">V:/</ComboBoxItem>
+                <ComboBoxItem Name="Cw">W:/</ComboBoxItem>
+                <ComboBoxItem Name="Cx">X:/</ComboBoxItem>
+                <ComboBoxItem Name="Cy">Y:/</ComboBoxItem>
+                <ComboBoxItem Name="Cz">Z:/</ComboBoxItem>
+            </ComboBox>
         </StackPanel>
-        <TextBlock Text="Please enter the file path to the new file to copy." Foreground="Black" Margin="0, 5, 0, 0" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="Wrap"/>
-        <TextBox Name="FilePath" IsEnabled="False"/>
-        <Button Name="Run" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" Content="Begin Batch File Transfer" IsEnabled="False"/>
+        <TextBlock Text="Please enter the file path to the new file to copy." Foreground="Black" Margin="0, 5, 0, 0" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="Wrap" SelectionChanged="TextBlock_SelectionChanged"/>
+        <TextBox Name="FilePath" IsEnabled="False" TextChanged="FilePath_TextChanged"/>
+        <Button Name="Run" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" Content="Begin Batch File Transfer" IsEnabled="False" Click="Run_Click" Background="#37628f"/>
     </StackPanel>
 </Page>

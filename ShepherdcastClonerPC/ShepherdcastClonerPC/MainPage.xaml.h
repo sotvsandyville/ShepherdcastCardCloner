@@ -19,5 +19,8 @@ namespace ShepherdcastClonerPC
 
 	private:
 		void Optimized_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
+		void Run_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
+		void FilePath_TextChanged(Platform::Object^ sender, Windows::UI::Xaml::Controls::TextChangedEventArgs^ e);
+		void DriveA_SelectionChanged(Platform::Object^ sender, Windows::UI::Xaml::Controls::SelectionChangedEventArgs^ e);
 	};
 }
