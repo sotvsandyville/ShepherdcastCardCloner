@@ -20,8 +20,8 @@
             <ComboBox Name="DriveA" Width="20" IsEnabled="False" SelectionChanged="DriveA_SelectionChanged">
                 <ComboBoxItem Name="Aa">A:/</ComboBoxItem>
                 <ComboBoxItem Name="Ab">B:/</ComboBoxItem>
-                <ComboBoxItem Name="Ac">C:/</ComboBoxItem>
-                <ComboBoxItem Name="Ad">D:/</ComboBoxItem>
+                <ComboBoxItem Name="Ac" IsEnabled="False">C:/</ComboBoxItem>
+                <ComboBoxItem Name="Ad" IsEnabled="False">D:/</ComboBoxItem>
                 <ComboBoxItem Name="Ae">E:/</ComboBoxItem>
                 <ComboBoxItem Name="Af">F:/</ComboBoxItem>
                 <ComboBoxItem Name="Ag">G:/</ComboBoxItem>
@@ -48,11 +48,11 @@
         </StackPanel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
             <TextBlock Text="Drive B: " Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <ComboBox Name="DriveB" Width="20" IsEnabled="False">
+            <ComboBox Name="DriveB" Width="20" IsEnabled="False" SelectionChanged="DriveB_SelectionChanged">
                 <ComboBoxItem Name="Ba">A:/</ComboBoxItem>
                 <ComboBoxItem Name="Bb">B:/</ComboBoxItem>
-                <ComboBoxItem Name="Bc">C:/</ComboBoxItem>
-                <ComboBoxItem Name="Bd">D:/</ComboBoxItem>
+                <ComboBoxItem Name="Bc" IsEnabled="False">C:/</ComboBoxItem>
+                <ComboBoxItem Name="Bd" IsEnabled="False">D:/</ComboBoxItem>
                 <ComboBoxItem Name="Be">E:/</ComboBoxItem>
                 <ComboBoxItem Name="Bf">F:/</ComboBoxItem>
                 <ComboBoxItem Name="Bg">G:/</ComboBoxItem>
@@ -79,11 +79,11 @@
         </StackPanel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
             <TextBlock Text="Drive C: " Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <ComboBox Name="DriveC" Width="20" IsEnabled="False">
+            <ComboBox Name="DriveC" Width="20" IsEnabled="False" SelectionChanged="DriveC_SelectionChanged">
                 <ComboBoxItem Name="Ca">A:/</ComboBoxItem>
                 <ComboBoxItem Name="Cb">B:/</ComboBoxItem>
-                <ComboBoxItem Name="Cc">C:/</ComboBoxItem>
-                <ComboBoxItem Name="Cd">D:/</ComboBoxItem>
+                <ComboBoxItem Name="Cc" IsEnabled="False">C:/</ComboBoxItem>
+                <ComboBoxItem Name="Cd" IsEnabled="False">D:/</ComboBoxItem>
                 <ComboBoxItem Name="Ce">E:/</ComboBoxItem>
                 <ComboBoxItem Name="Cf">F:/</ComboBoxItem>
                 <ComboBoxItem Name="Cg">G:/</ComboBoxItem>

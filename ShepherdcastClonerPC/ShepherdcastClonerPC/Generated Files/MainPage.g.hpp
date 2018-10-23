@@ -44,417 +44,432 @@ void ::ShepherdcastClonerPC::MainPage::Connect(int __connectionId, ::Platform::O
         break;
     case 4:
         {
-            this->FilePath = safe_cast<::Windows::UI::Xaml::Controls::TextBox^>(__target);
+            ::Windows::UI::Xaml::Controls::TextBlock^ element4 = safe_cast<::Windows::UI::Xaml::Controls::TextBlock^>(__target);
+            (safe_cast<::Windows::UI::Xaml::Controls::TextBlock^>(element4))->SelectionChanged += ref new ::Windows::UI::Xaml::RoutedEventHandler(this, (void (::ShepherdcastClonerPC::MainPage::*)
+                (::Platform::Object^, ::Windows::UI::Xaml::RoutedEventArgs^))&MainPage::TextBlock_SelectionChanged);
         }
         break;
     case 5:
+        {
+            this->FilePath = safe_cast<::Windows::UI::Xaml::Controls::TextBox^>(__target);
+            (safe_cast<::Windows::UI::Xaml::Controls::TextBox^>(this->FilePath))->TextChanged += ref new ::Windows::UI::Xaml::Controls::TextChangedEventHandler(this, (void (::ShepherdcastClonerPC::MainPage::*)
+                (::Platform::Object^, ::Windows::UI::Xaml::Controls::TextChangedEventArgs^))&MainPage::FilePath_TextChanged);
+        }
+        break;
+    case 6:
         {
             this->Run = safe_cast<::Windows::UI::Xaml::Controls::Button^>(__target);
             (safe_cast<::Windows::UI::Xaml::Controls::Button^>(this->Run))->Click += ref new ::Windows::UI::Xaml::RoutedEventHandler(this, (void (::ShepherdcastClonerPC::MainPage::*)
                 (::Platform::Object^, ::Windows::UI::Xaml::RoutedEventArgs^))&MainPage::Run_Click);
         }
         break;
-    case 6:
-        {
-            this->DriveC = safe_cast<::Windows::UI::Xaml::Controls::ComboBox^>(__target);
-        }
-        break;
     case 7:
         {
-            this->Ca = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->DriveC = safe_cast<::Windows::UI::Xaml::Controls::ComboBox^>(__target);
+            (safe_cast<::Windows::UI::Xaml::Controls::ComboBox^>(this->DriveC))->SelectionChanged += ref new ::Windows::UI::Xaml::Controls::SelectionChangedEventHandler(this, (void (::ShepherdcastClonerPC::MainPage::*)
+                (::Platform::Object^, ::Windows::UI::Xaml::Controls::SelectionChangedEventArgs^))&MainPage::DriveC_SelectionChanged);
         }
         break;
     case 8:
         {
-            this->Cb = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Ca = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 9:
         {
-            this->Cc = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Cb = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 10:
         {
-            this->Cd = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Cc = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 11:
         {
-            this->Ce = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Cd = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 12:
         {
-            this->Cf = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Ce = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 13:
         {
-            this->Cg = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Cf = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 14:
         {
-            this->Ch = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Cg = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 15:
         {
-            this->Ci = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Ch = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 16:
         {
-            this->Cj = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Ci = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 17:
         {
-            this->Ck = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Cj = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 18:
         {
-            this->Cl = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Ck = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 19:
         {
-            this->Cm = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Cl = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 20:
         {
-            this->Cn = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Cm = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 21:
         {
-            this->Co = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Cn = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 22:
         {
-            this->Cp = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Co = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 23:
         {
-            this->Cq = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Cp = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 24:
         {
-            this->Cr = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Cq = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 25:
         {
-            this->Cs = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Cr = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 26:
         {
-            this->Ct = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Cs = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 27:
         {
-            this->Cu = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Ct = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 28:
         {
-            this->Cv = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Cu = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 29:
         {
-            this->Cw = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Cv = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 30:
         {
-            this->Cx = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Cw = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 31:
         {
-            this->Cy = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Cx = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 32:
         {
-            this->Cz = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Cy = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 33:
         {
-            this->DriveB = safe_cast<::Windows::UI::Xaml::Controls::ComboBox^>(__target);
+            this->Cz = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 34:
         {
-            this->Ba = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->DriveB = safe_cast<::Windows::UI::Xaml::Controls::ComboBox^>(__target);
+            (safe_cast<::Windows::UI::Xaml::Controls::ComboBox^>(this->DriveB))->SelectionChanged += ref new ::Windows::UI::Xaml::Controls::SelectionChangedEventHandler(this, (void (::ShepherdcastClonerPC::MainPage::*)
+                (::Platform::Object^, ::Windows::UI::Xaml::Controls::SelectionChangedEventArgs^))&MainPage::DriveB_SelectionChanged);
         }
         break;
     case 35:
         {
-            this->Bb = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Ba = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 36:
         {
-            this->Bc = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Bb = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 37:
         {
-            this->Bd = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Bc = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 38:
         {
-            this->Be = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Bd = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 39:
         {
-            this->Bf = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Be = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 40:
         {
-            this->Bg = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Bf = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 41:
         {
-            this->Bh = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Bg = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 42:
         {
-            this->Bi = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Bh = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 43:
         {
-            this->Bj = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Bi = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 44:
         {
-            this->Bk = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Bj = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 45:
         {
-            this->Bl = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Bk = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 46:
         {
-            this->Bm = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Bl = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 47:
         {
-            this->Bn = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Bm = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 48:
         {
-            this->Bo = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Bn = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 49:
         {
-            this->Bp = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Bo = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 50:
         {
-            this->Bq = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Bp = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 51:
         {
-            this->Br = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Bq = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 52:
         {
-            this->Bs = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Br = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 53:
         {
-            this->Bt = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Bs = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 54:
         {
-            this->Bu = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Bt = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 55:
         {
-            this->Bv = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Bu = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 56:
         {
-            this->Bw = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Bv = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 57:
         {
-            this->Bx = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Bw = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 58:
         {
-            this->By = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Bx = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 59:
         {
-            this->Bz = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->By = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 60:
         {
-            this->DriveA = safe_cast<::Windows::UI::Xaml::Controls::ComboBox^>(__target);
+            this->Bz = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 61:
         {
-            this->Aa = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->DriveA = safe_cast<::Windows::UI::Xaml::Controls::ComboBox^>(__target);
+            (safe_cast<::Windows::UI::Xaml::Controls::ComboBox^>(this->DriveA))->SelectionChanged += ref new ::Windows::UI::Xaml::Controls::SelectionChangedEventHandler(this, (void (::ShepherdcastClonerPC::MainPage::*)
+                (::Platform::Object^, ::Windows::UI::Xaml::Controls::SelectionChangedEventArgs^))&MainPage::DriveA_SelectionChanged);
         }
         break;
     case 62:
         {
-            this->Ab = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Aa = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 63:
         {
-            this->Ac = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Ab = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 64:
         {
-            this->Ad = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Ac = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 65:
         {
-            this->Ae = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Ad = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 66:
         {
-            this->Af = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Ae = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 67:
         {
-            this->Ag = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Af = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 68:
         {
-            this->Ah = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Ag = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 69:
         {
-            this->Ai = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Ah = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 70:
         {
-            this->Aj = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Ai = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 71:
         {
-            this->Ak = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Aj = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 72:
         {
-            this->Al = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Ak = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 73:
         {
-            this->Am = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Al = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 74:
         {
-            this->An = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Am = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 75:
         {
-            this->Ao = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->An = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 76:
         {
-            this->Ap = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Ao = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 77:
         {
-            this->Aq = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Ap = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 78:
         {
-            this->Ar = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Aq = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 79:
         {
-            this->As = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Ar = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 80:
         {
-            this->At = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->As = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 81:
         {
-            this->Au = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->At = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 82:
         {
-            this->Av = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Au = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 83:
         {
-            this->Aw = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Av = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 84:
         {
-            this->Ax = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Aw = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 85:
         {
-            this->Ay = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+            this->Ax = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
         break;
     case 86:
+        {
+            this->Ay = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
+        }
+        break;
+    case 87:
         {
             this->Az = safe_cast<::Windows::UI::Xaml::Controls::ComboBoxItem^>(__target);
         }
